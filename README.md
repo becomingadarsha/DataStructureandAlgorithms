@@ -2,7 +2,7 @@
 
 I've tried to solve most of the DSA problems that are using algorithms that consumes less time and with efficient memory management.
 
-Most of the contents are taken from my college curriculum. You can create a pull and contribute to the project and grow this project more.
+Most of the contents are taken from my college curriculum and are programmed accordingly. You can create a pull and contribute to the project and grow this project more.
 
 Programming Language : C/C++
 IDE used : I've compiled and tested using VS Code but you can try in any IDE like DevC++, Codeblocks,etc.
