@@ -84,9 +84,9 @@ void display(stack *st)
 {
     int i,n;
      
-    if(st -> top == -1)
+    if(isEmpty(st))
     {
-        printf("Stack is Empty.");
+        printf("Stack is Empty.\n");
 
     }
    
