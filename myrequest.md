@@ -19,4 +19,5 @@ Of course there are also other great possibilities like CLion, Eclipse, NetBeans
 Some people may accuse me to trying to be smarter than God in this post. Belive me, I am not. I am just sad that many people here are not ambicious at all and using archaic toolchain.
 
 
-![alt text](blob:https://web.telegram.org/1e4d7124-2e46-469d-a935-584b52aceb46)
+
+![Image description](https://imgur.com/a/oh4dgSr)
