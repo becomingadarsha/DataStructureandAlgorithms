@@ -20,4 +20,4 @@ Some people may accuse me to trying to be smarter than God in this post. Belive 
 
 
 
-![Image description](https://imgur.com/a/oh4dgSr)
+![alt tag](https://imgur.com/a/HtC4lDD "Description goes here")
