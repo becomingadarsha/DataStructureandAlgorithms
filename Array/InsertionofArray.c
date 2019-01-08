@@ -39,12 +39,12 @@ int main(){
     else
     {
 
-        for(i=len+1;i>=pos;i--)
+        for(i=len;i>=pos;i--)
             {
                 a[i+1]=a[i];
             }
                 a[pos]=num;
 
     }
-
+    len++;
     }
