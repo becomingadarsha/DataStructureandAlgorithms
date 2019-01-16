@@ -159,9 +159,6 @@ You can use: printf( "%c[1;1H%c[2J", 27, 27 );
 
 You might want to write that into a function.
 
-# 10. How can I reverse the order of the bytes in a string?
-
-See examples/strrev/strrev.c [here](https://github.com/CProgrammingFBGroup/CProgrammingNotes/blob/master/examples/strrev/strrev.c)
 
 ## Another-C-FAQ
 
