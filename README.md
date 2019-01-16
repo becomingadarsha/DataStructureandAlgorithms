@@ -6,7 +6,7 @@ Most of the contents are taken from my college curriculum and are programmed acc
 
 Programming Language : C/C++
 
-Compiler Used : gcc 7.3.0, g++ version 7.3.0
+Compiler : gcc v7.3.0, g++ v7.3.0
 
 IDE used : I've compiled and tested using VS Code but you can try in any IDE like DevC++, Codeblocks,etc.
 
