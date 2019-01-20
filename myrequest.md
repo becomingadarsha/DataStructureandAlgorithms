@@ -1,5 +1,5 @@
 # It's me again.
-# I appeal to you - be ambicious! Why do I say so? Because I see very bad trends in this group.
+# I appeal to you - be ambicious!
 
 1. When someone is asking for good IDE many people advice Dev-C++. Stop it! It is discontinued, obsolete. If you use it, and consider yourself as an ambicious person, switch to another IDE and forget Dev-C++.
 
