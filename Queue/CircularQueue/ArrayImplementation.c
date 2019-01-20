@@ -48,7 +48,7 @@ void ENQUEUE(cQueue *cq, int data) {
 }
 
 
-int DEQUEUE(cQueue *cq) {
+void DEQUEUE(cQueue *cq) {
     int temp;
 
     if(isEmpty(cq)) {
