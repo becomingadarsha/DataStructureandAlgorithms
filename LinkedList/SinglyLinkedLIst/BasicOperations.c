@@ -98,6 +98,15 @@ void insertatgivenPosition(int item){ //insert node at nth position
     printf("Enter the position of node where you want to store the element : ");
     scanf("%d",&pos);
 
+    if(first == NULL){
+        printf("\nEmpty linked list.\n");
+
+        return;
+    }
+
+    
+    else
+    {
         temp = first; //asssign ptr temp to first node
 
         for( i = 1; i < pos-1; i++)
@@ -107,6 +116,9 @@ void insertatgivenPosition(int item){ //insert node at nth position
 
         newnode -> next = temp -> next;
         temp -> next = newnode;
+    }
+    
+       
 
 }
     
@@ -126,7 +138,9 @@ void delteFirst()
     else
     {
         temp = first;
+         printf("Deleted item  = %d", temp -> info);
         first = first -> next;
+       
         free(temp);
     }
 }
@@ -148,17 +162,19 @@ void deleteLast()
     else if(first -> next == NULL){
         hold =first;
         first =NULL;
+        printf("Deleted item  = %d", hold -> info);
         free(hold);
     }
 
     else
     {
         temp = first;
-       
+ 
        while(temp-> next -> next != NULL){
            temp = temp -> next;
        }
        hold = temp -> next;
+     printf("Deleted item  = %d", hold -> info);
        temp-> next =NULL;
        free(hold);
     }
@@ -192,6 +208,7 @@ void delete_nthNode(){
         }
         
         hold = temp ->next;
+         printf("Deleted item  = %d", hold -> info);
         temp->next = hold->next;
         free(hold);
 
