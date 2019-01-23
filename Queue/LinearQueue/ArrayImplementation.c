@@ -100,7 +100,7 @@ void display(Queue *qt)
 int main(int argc, char const *argv[])
 {
     int ch,x;
-    Queue qt;
+    Queue *qt;
 
     createEmptyQueue(&qt);
     printf("Enter your choice :\n");
@@ -109,7 +109,7 @@ int main(int argc, char const *argv[])
     printf("Press 3. for View Elements\n");
     printf("Press 4. for Exit\n\n\n");
 
-    while( false == false) //using meme in real life
+    while(1) //using meme in real life
     {
 
         printf("Enter your choice : ");
@@ -121,16 +121,16 @@ int main(int argc, char const *argv[])
             case 1:
                 printf("Enter element to be inserted :");
                 scanf("%d",&x);
-                ENQUEUE(&qt,x);
+                ENQUEUE(qt,x);
                 break;
             
             case 2:
-                x = DEQUEUE(&qt);
+                x = DEQUEUE(qt);
                 printf("The removed valeu is %d",x);
                 break;
             
             case 3:
-                display(&qt);
+                display(qt);
                 exit(1);
 
             case 4:

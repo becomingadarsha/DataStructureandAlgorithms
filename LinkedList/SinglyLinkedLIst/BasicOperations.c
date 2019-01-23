@@ -126,7 +126,7 @@ void insertatgivenPosition(int item){ //insert node at nth position
 /*
  * delete first node of linked list
  */
-void delteFirst()
+void deleteFirst()
 {
     NodeType *temp;
     
@@ -254,7 +254,7 @@ void countNodes()
 /*
  * searching an element in a non-empty list
  */
-void search()
+void searchElement()
 {
     NodeType *temp;
     int flag = 0, key, pos = 0;
@@ -298,7 +298,7 @@ void displayElements(){
     
     if (first == NULL) { //if adress of head is 0
         printf("\n Linked list is empty.\n");
-        exit(1);
+        return;
     }
     
     else
@@ -308,7 +308,7 @@ void displayElements(){
         {    
             printf("%d\t", temp->info);
         }
-        printf(" ]\n");
+        printf("]\n");
     }
     
     
@@ -373,7 +373,7 @@ int main(int argc, char const *argv[])
 
 
             case 4:
-              delteFirst();
+              deleteFirst();
                 break;
 
 
@@ -398,7 +398,7 @@ int main(int argc, char const *argv[])
 
 
             case 9:
-              search();
+              searchElement();
                 break;
 
 
