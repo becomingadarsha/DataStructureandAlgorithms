@@ -1,9 +1,5 @@
 /*
-	@Author
-		Name : Halil İbrahim Bestil
-		Web-site : http://www.hibestil.com
-		E-Mail Adress : hibestil [at] gmail [.] com
-		School: Yildiz Technical University - Computer Engineering
+
 	@About
 		This program creates a simple Binary tree. 
 		
@@ -27,9 +23,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*
+ * This structure represents a single node in a BST.
+ */
 struct Tree
 {
     int info;
+
     struct Tree *left;
     struct Tree *right;
 };
@@ -60,8 +60,6 @@ Tree *createNode(Tree *root, int item)
     }
 }
 
-
-
 void PreorderTraversal(Tree *root)
 {
 
@@ -75,8 +73,6 @@ void PreorderTraversal(Tree *root)
     return;
 }
 
-
-
 void InorderTraversal(Tree *root)
 {
     if (root != NULL)
@@ -87,8 +83,6 @@ void InorderTraversal(Tree *root)
     }
     return;
 }
-
-
 
 void PostorderTraversal(Tree *root)
 {
@@ -193,46 +187,44 @@ Tree *Delete(Tree *node, int data)
     return node;
 }
 
+Tree *search(Tree *root)
+{
+    int key, i;
 
+    Tree *ptr;
+    ptr = root;
 
-Tree *search(Tree *root){
-        int key,i;
+    printf("Enter element to be searched : ");
+    scanf("%d", &key);
 
-        Tree *ptr;
-        ptr = root;
-
-        printf("Enter element to be searched : ");
-        scanf("%d",&key);
-
-        while(ptr){
-            if(key> ptr -> info){
-                ptr = ptr -> right;
-            }
-
-            else if(key < ptr -> info){
-                ptr = ptr -> left;
-            }
-
-            else
-            {
-                break;
-            }
-            
+    while (ptr)
+    {
+        if (key > ptr->info)
+        {
+            ptr = ptr->right;
         }
 
-    if(ptr){
-        printf("Element %d is found which is %d\n",key, ptr -> info);
-      
+        else if (key < ptr->info)
+        {
+            ptr = ptr->left;
+        }
+
+        else
+        {
+            break;
+        }
+    }
+
+    if (ptr)
+    {
+        printf("Element %d is found which is %d\n", key, ptr->info);
     }
 
     else
     {
         printf("\nElement doesn't exits\n");
-       
     }
-    
 }
-
 
 int TreeDeep(Tree *root)
 {
@@ -241,13 +233,11 @@ int TreeDeep(Tree *root)
     {
         int leftdeep = TreeDeep(root->left);
         int rightdeep = TreeDeep(root->right);
-        deep = leftdeep >= rightdeep?leftdeep+1:rightdeep+1;
+        deep = leftdeep >= rightdeep ? leftdeep + 1 : rightdeep + 1;
     }
 
     return deep;
 }
-
-
 
 int main(int argc, char const *argv[])
 {
@@ -306,12 +296,12 @@ int main(int argc, char const *argv[])
             PreorderTraversal(root);
             break;
 
-            case 6:
-                printf("\nSearch in binary tree : \n");
-                root = search(root);
-                break;
+        case 6:
+            printf("\nSearch in binary tree : \n");
+            root = search(root);
+            break;
         case 7:
-             depth = TreeDeep(root);
+            depth = TreeDeep(root);
             printf("Depth of binary tree is : %d\n", depth);
             break;
 
