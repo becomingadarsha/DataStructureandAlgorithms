@@ -11,15 +11,11 @@ struct Queue{
 
 typedef struct Queue Queue;
 
-void createEmptyQueue(Queue *qt)
-{
-    qt -> top = -1;
-    qt -> rear =0;
-}
+     
 
 bool isFull(Queue *qt)
 {
-    if(qt-> top ==MAXSIZE -1)
+    if(qt-> rear == MAXSIZE -1)
             return true;
     
     
@@ -32,7 +28,7 @@ bool isFull(Queue *qt)
 
 bool isEmpty(Queue *qt)
 {
-    if(qt-> top < qt->rear)
+    if(qt-> top > qt->rear)
             return true;
     
     
@@ -101,8 +97,10 @@ int main(int argc, char const *argv[])
 {
     int ch,x;
     Queue *qt;
-
-    createEmptyQueue(&qt);
+    qt -> top = 0;
+    qt -> rear = -1;
+    
+   // createEmptyQueue(qt);
     printf("Enter your choice :\n");
     printf("Press 1. for ENQUEUE\n");
     printf("Press 2. for DEQUEUE\n");
