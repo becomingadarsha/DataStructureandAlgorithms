@@ -4,39 +4,39 @@
 
 #define MAXSIZE 100
 struct Queue{
-    int top;
+    int front;
     int rear;
     int item[MAXSIZE];
 };
 
 typedef struct Queue Queue;
 
-     
+
 
 bool isFull(Queue *qt)
 {
     if(qt-> rear == MAXSIZE -1)
             return true;
-    
-    
+
+
     else
     {
         return false;
     }
-    
+
 }
 
 bool isEmpty(Queue *qt)
 {
-    if(qt-> top > qt->rear)
+    if(qt-> front > qt->rear)
             return true;
-    
-    
+
+
     else
     {
         return false;
     }
-    
+
 }
 
 
@@ -47,7 +47,7 @@ void ENQUEUE(Queue *qt,int x)
         printf("Queue is full..\n");
     }
 
-    
+
     else
     {
         qt -> rear ++;
@@ -64,11 +64,11 @@ int DEQUEUE(Queue *qt)
         printf("Queue is empty..\n");
     }
 
-    
+
     else
     {
-        x = qt->item [qt->top];
-        qt -> top ++;
+        x = qt->item [qt->front];
+        qt -> front ++;
         return x;
     }
 }
@@ -81,7 +81,7 @@ void display(Queue *qt)
         printf("Stack is empty.\n");
     }
 
-    
+
     else
     {
           for(i=0;i <= qt->rear;i++)
@@ -90,16 +90,16 @@ void display(Queue *qt)
     }
         printf("\n");
     }
-    
-  
+
+
 }
 int main(int argc, char const *argv[])
 {
     int ch,x;
     Queue *qt;
-    qt -> top = 0;
+    qt -> front = 0;
     qt -> rear = -1;
-    
+
    // createEmptyQueue(qt);
     printf("Enter your choice :\n");
     printf("Press 1. for ENQUEUE\n");
@@ -112,8 +112,8 @@ int main(int argc, char const *argv[])
 
         printf("Enter your choice : ");
         scanf("%d",&ch);
-        
-        
+
+
         switch (ch)
         {
             case 1:
@@ -121,12 +121,12 @@ int main(int argc, char const *argv[])
                 scanf("%d",&x);
                 ENQUEUE(qt,x);
                 break;
-            
+
             case 2:
                 x = DEQUEUE(qt);
                 printf("The removed valeu is %d",x);
                 break;
-            
+
             case 3:
                 display(qt);
                 exit(1);
@@ -137,11 +137,6 @@ int main(int argc, char const *argv[])
             default:
                 break;
         }
-
-
-
-
-
 
 
     }
