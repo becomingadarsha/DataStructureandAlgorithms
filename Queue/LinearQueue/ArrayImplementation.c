@@ -11,7 +11,10 @@ struct Queue{
 
 typedef struct Queue Queue;
 
-
+void createEmptyQueue(Queue *pq){
+    pq ->  front = 0;
+    pq -> rear = -1;
+}
 
 bool isFull(Queue *qt)
 {
@@ -96,9 +99,8 @@ void display(Queue *qt)
 int main(int argc, char const *argv[])
 {
     int ch,x;
-    Queue *qt;
-    qt -> front = 0;
-    qt -> rear = -1;
+    Queue qt;
+    createEmptyQueue(&qt);
 
    // createEmptyQueue(qt);
     printf("Enter your choice :\n");
@@ -119,16 +121,16 @@ int main(int argc, char const *argv[])
             case 1:
                 printf("Enter element to be inserted :");
                 scanf("%d",&x);
-                ENQUEUE(qt,x);
+                ENQUEUE(&qt,x);
                 break;
 
             case 2:
-                x = DEQUEUE(qt);
+                x = DEQUEUE(&qt);
                 printf("The removed valeu is %d",x);
                 break;
 
             case 3:
-                display(qt);
+                display(&qt);
                 exit(1);
 
             case 4:
